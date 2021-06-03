@@ -1,0 +1,5 @@
+port: '/dev/ttyUSB2' # communication port
+eq_preset: false # [Equilibrium/Preset] -> True , [P1/P2/PL] -> False
+hand_perc: false # [Hand command in percentual] -> 
+IDcubes: [] # ID cubes in chain
+IDhands: [2] # ID hands in chain
