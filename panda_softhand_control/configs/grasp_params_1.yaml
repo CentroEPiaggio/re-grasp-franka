@@ -1,0 +1,38 @@
+# Parameters for task sequencer
+# Remember that there might be other important constants that can only be changed from the src code.
+
+grasp_params_1:
+  # Name of the robot
+  robot_name_1: panda_arm_1
+  # Name of the robot joints (without the number of the joints)
+  robot_joints_name_1: panda_arm_1_joint
+  # Position controller
+  pos_controller_1: position_joint_trajectory_controller_1
+  # Impedance controller
+  imp_controller_1: cartesian_impedance_controller_softbots_stiff_matrix
+  # Name of the topic where the object pose is published
+  object_topic_name_1: /grasp/chosen_object_1
+
+  # The joint configuration for home
+  #home_joints: [0.00996, -0.7360, -0.0044, -2.0562, -0.0173, 1.4542, 0.03390] 
+  home_joints_1: [-0.03653740386414726, -0.5270953368972916, 0.053251533301580175, -2.017978906979907, 0.0505431158590123916, 1.2532744644808393, 0.178863015511539637]
+  #1) PRESA VERTICALE SFERA
+  # # Transform from object frame to grasp pose frame (xyzrpy) (DEFAULT) 
+  # grasp_transform_1: [-0.288, 0.1915, 0.279, -3.095, 0.229, 0.010] #presa verticale sfera
+  # pre_grasp_transform_1: [-0.288, 0.1915, 0.651, -3.095, 0.229, 0.010] #laterale, se voglio centale y=0.0
+  # home_grasp_transform_1: [-0.258, 0.1915, 0.651, -3.095, 0.229, 0.010]
+
+  #   #2) PRESA DI LATO SFERA
+ 
+  grasp_transform_1: [-0.268, 0.0915, 0.1509, -1.625, 0.029, 0.410]
+  pre_grasp_transform_1: [-0.268, 0.0915, 0.615, -1.625, 0.029, 0.410] 
+  home_grasp_transform_1: [-0.208, 0.0915, 0.615, -1.625, 0.029, 0.410]
+
+#1) PRESA VERTICALE CILINDRO
+  # Transform from object frame to grasp pose frame (xyzrpy) (DEFAULT) 
+  # grasp_transform_1: [-0.270, 0.2352, 0.2585, 3.158, 0.360, -0.01] #presa verticale sfera
+
+  # # Transform from grasp pose frame to pre-grasp pose frame (xyzrpy) CENTRALE 
+  # pre_grasp_transform_1: [-0.270, 0.2352, 0.641, 3.158, 0.360, -0.01] #laterale, se voglio centale y=0.0
+  # home_grasp_transform_1: [-0.295, 0.2352, 0.641, 3.158, 0.360, -0.01]
+

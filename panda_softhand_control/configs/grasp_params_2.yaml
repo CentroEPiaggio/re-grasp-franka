@@ -1,0 +1,38 @@
+# Parameters for task sequencer
+# Remember that there might be other important constants that can only be changed from the src code.
+
+grasp_params_2:
+  # Name of the robot
+  robot_name_2: panda_arm_2
+  # Name of the robot joints (without the number of the joints)
+  robot_joints_name_2: panda_arm_2_joint
+  # Position controller
+  pos_controller_2: position_joint_trajectory_controller_2
+  # Impedance controller
+  imp_controller_2: cartesian_impedance_controller_softbots_stiff_matrix
+  # Name of the topic where the object pose is published
+  object_topic_name_2: /grasp/chosen_object_2
+
+  # The joint configuration for home
+  #home_joints: [0.00996, -0.7360, -0.0044, -2.0562, -0.0173, 1.4542, 0.03390] 
+  home_joints_2: [1.8481565974846219, 0.540287933578268, -1.8417043239769628, -1.399079566925907, 0.680435263381964, 1.0345110086639036, 0.2931069555891598]
+  
+  # #2) PRESA DI LATO 
+  #   # Transform from object frame to grasp pose frame (xyzrpy) (DEFAULT) 
+  # grasp_transform_2: [-0.226, -0.459, 0.315, 1.56, 0.360, -0.162] #presa verticale sfera
+
+  # # Transform from grasp pose frame to pre-grasp pose frame (xyzrpy) CENTRALE 
+  # pre_grasp_transform_2: [-0.258, -0.193, 0.315, 1.56, 0.360, -0.162] #laterale, se voglio centale y=0.0
+  # post_grasp_transform_2: [-0.108, -0.1863, 0.545, 1.56, 0.360, -0.162]
+  # home_grasp_transform_2: [-0.108, -0.063, 0.545, 1.56, 0.360, -0.162]
+
+
+
+#2) PRESA dal basso 
+    # Transform from object frame to grasp pose frame (xyzrpy) (DEFAULT) 
+  grasp_transform_2: [-0.186, -0.359, 0.285, 0.5,  0.182, -0.525] #presa verticale sfera
+
+  # Transform from grasp pose frame to pre-grasp pose frame (xyzrpy) CENTRALE 
+  pre_grasp_transform_2: [-0.168, 0.045, 0.2615, 1.2, 0.55, -0.525] # PER RE GRASP
+  post_grasp_transform_2: [-0.108, -0.193, 0.545, 3.058, 0.360, -0.162]
+  home_grasp_transform_2: [-0.168, 0.063, 0.2615, 1.2, 0.55, -0.525]

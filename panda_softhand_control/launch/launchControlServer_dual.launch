@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- Launch arguments -->
+	
+	<!-- Loading config file to param server -->
+
+	<!-- Load main node -->
+  <node name="control_server_node_1" pkg="panda_softhand_control" type="control_server_1" output="screen"/>
+  <node name="control_server_node2" pkg="panda_softhand_control" type="control_server_2" output="screen"/>
+
+</launch>
